@@ -60,12 +60,6 @@
 
 <!-- Isi -->
 <div id="isi">
-
-<section class="isi">
-  <img src="images/lasan.jpg" class="img-full">
-  
-</section>
-
     <section class="section">
       
       <p class="judul">
@@ -80,6 +74,12 @@
             13 September 2026
         </p>
     </section>
+<section class="isi">
+  <img src="images/lasan.jpg" class="img-full">
+  
+</section>
+
+
 <section class="welcome">
   <div class="timeline">
     <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
@@ -243,13 +243,13 @@
         <img src="images/bca.png">
         <h3>Bank BCA</h3>
         <p class="rekening">
-            1234567890
+            0131794061
         </p>
         <p>a.n. Lasan Nabihi</p>
 
-        <button>
-        📋 Salin Nomor Rekening
-        </button>
+        <button onclick="copyRekening1()">
+    📋 Salin Nomor Rekening
+</button>
     </div>
 
 
@@ -257,13 +257,12 @@
         <img src="images/bca.png">
         <h3>Bank BCA</h3>
         <p class="rekening">
-            1234567890
+            0131794061
         </p>
         <p>a.n. Maya</p>
 
-        <button>
-        📋 Salin Nomor Rekening
-        </button>
+        <button onclick="copyRekening2()">
+    📋 Salin Nomor Rekening
     </div>
 
 </div>
@@ -305,10 +304,18 @@
         <button type="submit" class="btn-rsvp">
             💌 Kirim RSVP
         </button>
-
+        <section class="gift">
+          <h2>RSVP</h2>
+        </section>
+        
+<div id="listUcapan" class=""></div>
     </form>
     
 </section>
+
+
+
+
 
 <!-- penutup -->
 <section class="penutup">
@@ -336,14 +343,17 @@
     </div>
 
 </section>
+<!-- rsvp baru -->
 
-</div>
 <!-- code lagu -->
 <audio id="musik" loop>
     <source src="wedding.mp3" type="audio/mp3">
 </audio>
 
 <script src="script.js"></script>
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/rsvp.js"></script>
+</body>
 
 </body>
 </html>

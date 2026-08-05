@@ -65,10 +65,30 @@ animasi.forEach((item) => {
 
 // hadiah
 
-function copyRekening(){
-    navigator.clipboard.writeText("1234567890");
-    alert("Nomor rekening berhasil disalin");
+function copyRekening1() {
+    const nomor = "0131794061";
+
+    navigator.clipboard.writeText(nomor)
+        .then(() => {
+            alert("Nomor rekening berhasil disalin");
+        })
+        .catch(() => {
+            alert("Gagal menyalin nomor rekening");
+        });
 }
+
+function copyRekening2() {
+    const nomor = "1234567890";
+
+    navigator.clipboard.writeText(nomor)
+        .then(() => {
+            alert("Nomor rekening berhasil disalin");
+        })
+        .catch(() => {
+            alert("Gagal menyalin nomor rekening");
+        });
+}
+
 // rsvp
 
 document.getElementById("rsvpForm").addEventListener("submit", async function(e) {
@@ -83,7 +103,7 @@ document.getElementById("rsvpForm").addEventListener("submit", async function(e)
 
     try {
 
-        const response = await fetch("AKfycbyxWTOucDoJ-JyCoHL6hjJ6WrHhYMo95OJa9GsGBP9e1F10-MSFbsN63gVIdIPLkJDp", {
+        const response = await fetch("1oMVRGGo-IrYMSrHXBg8KgnDeRMO8c8wBHTgYBRHlJyweJFCJlQAniBAP", {
             method: "POST",
             headers: {
                 "Content-Type": "text/plain;charset=UTF-8"

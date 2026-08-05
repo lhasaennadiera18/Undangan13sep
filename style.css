@@ -31,7 +31,6 @@ p{
 }
 
 .timeline::before{
-    content:"";
     position:absolute;
     top:0;
     left:0;
@@ -183,11 +182,13 @@ button:hover{
     padding:40px 15px;
 }
 
-
+.isi{position:relative;
+    z-index:2;
+    padding:40px 15px;
+    text-align:center;
+}
 
 /* SEMUA KOTAK */
-
-.section,
 .timeline,
 .card,
 .gift-card,
@@ -475,6 +476,53 @@ box-shadow:var(--shadow);
     border-radius:28px;
 }
 
+/* tampilan rsvp */
+#listUcapan{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.ucapan-item{
+    background:#fff;
+    border-radius:20px;
+    padding:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-left:5px solid #d4af37;
+}
+
+.ucapan-item h3{
+    margin:0;
+    font-size:24px;
+}
+
+.ucapan-item small{
+    color:#777;
+    display:block;
+    margin:5px 0 12px;
+}
+
+.ucapan-item p{
+    margin:0;
+    line-height:1.6;
+}
+/* tombol hapus rsvp */
+.hapus-btn{
+    width:100%;
+    margin-top:15px;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:#d9534f;
+    color:#fff;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hapus-btn:hover{
+    background:#b52b27;
+}
 /* penutup */
 
 .penutup{
