@@ -44,7 +44,7 @@ setInterval(() => {
 
 // Animasi saat scroll
 const animasi = document.querySelectorAll(
-    ".welcome,.mempelai,.akad,.lokasi,.story,.gallery"
+    ".welcome,.mempelai,.akad,.lokasi,.story,.galeri"
 );
 
 const observer = new IntersectionObserver((entries) => {
