@@ -78,7 +78,7 @@ function copyRekening1() {
 }
 
 function copyRekening2() {
-    const nomor = "1234567890";
+    const nomor = "3024375551";
 
     navigator.clipboard.writeText(nomor)
         .then(() => {

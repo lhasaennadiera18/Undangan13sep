@@ -653,18 +653,18 @@ button:hover {
 
 .ornamen-bunga-pria {
     right:
-        clamp(-45px, -8vw, -70px);
+        clamp(-45px, -8vw, -60px);
 
     bottom:
-        clamp(-45px, -8vw, -30px);
+        clamp(-45px, -8vw, -25px);
 }
 
 .ornamen-bunga-wanita {
     left:
-        clamp(-45px, -8vw, -70px);
+        clamp(-45px, -8vw, -60px);
 
     bottom:
-        clamp(-40px, -8vw, -30px);
+        clamp(-40px, -8vw, -25px);
 }
 
 /* =========================================================
@@ -1060,7 +1060,7 @@ button:hover {
 /* =========================================================
    HAPUS RSVP
 ========================================================= */
-
+/* button dinon aktifkan */
 /*.hapus-btn {
     width: 100%;
 
@@ -1075,8 +1075,8 @@ button:hover {
     background: #d9534f;
 
     color: white;
-}
-*/
+}*/
+
 /* =========================================================
    THANKS
 ========================================================= */

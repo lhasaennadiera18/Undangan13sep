@@ -58,18 +58,11 @@ async function loadUcapan() {
 
         listUcapan.innerHTML += `
         <div class="ucapan-item">
-
             <h4>${data.nama}</h4>
-
             <small>${data.status} • ${data.jumlah} tamu</small>
-
             <p>${data.ucapan}</p>
-
-            <button class="hapus-btn"
-                onclick="hapusRSVP('${item.id}')">
-                🗑 Hapus
-            </button>
-
+           
+         
         </div>
         `;
 
@@ -100,3 +93,8 @@ window.hapusRSVP = async function(id){
 }
 
 loadUcapan();
+// tombol button di bawah data . ucapan   <button class="hapus-btn"
+               // onclick="hapusRSVP('${item.id}')">
+              //  🗑 Hapus
+         //   </button>
+         // hapus aemuat tanda miring
