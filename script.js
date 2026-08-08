@@ -2,16 +2,54 @@
    SCRIPT.JS FINAL — LASAN & MAYA
 ========================================================= */
 
+
+/* =========================================================
+   1. SAAT HALAMAN DIBUKA
+========================================================= */
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Kunci scroll saat cover masih terbuka
+    // Kunci scroll sebelum tombol Buka Undangan ditekan
     document.body.classList.add("lock-scroll");
+
+    // Tampilkan nama tamu dari URL
+    tampilkanNamaTamu();
+
+    // Jalankan countdown
+    mulaiCountdown();
 
 });
 
 
 /* =========================================================
-   BUKA UNDANGAN
+   2. NAMA TAMU DARI URL
+========================================================= */
+
+function tampilkanNamaTamu() {
+
+    const namaTamu = document.getElementById("namaTamu");
+
+    if (!namaTamu) return;
+
+    const params = new URLSearchParams(window.location.search);
+
+    const nama = params.get("to");
+
+    if (nama && nama.trim() !== "") {
+
+        namaTamu.textContent = nama.trim();
+
+    } else {
+
+        namaTamu.textContent = "Tamu Undangan";
+
+    }
+
+}
+
+
+/* =========================================================
+   3. BUKA UNDANGAN
 ========================================================= */
 
 function bukaUndangan() {
@@ -20,32 +58,54 @@ function bukaUndangan() {
     const isi = document.getElementById("isi");
     const musik = document.getElementById("musik");
 
-    // Pastikan elemen tersedia
     if (!cover || !isi) {
+
         console.error("Cover atau isi tidak ditemukan.");
+
         return;
+
     }
 
-    // Buka scroll
+
+    /* -----------------------------------------
+       BUKA KUNCI SCROLL
+    ----------------------------------------- */
+
     document.body.classList.remove("lock-scroll");
 
-    // Tandai undangan sudah dibuka
     document.body.classList.add("undangan-dibuka");
 
-    // Putar musik
+
+    /* -----------------------------------------
+       PUTAR MUSIK
+    ----------------------------------------- */
+
     if (musik) {
+
         musik.volume = 0.7;
 
         const playPromise = musik.play();
 
         if (playPromise !== undefined) {
+
             playPromise.catch(function (error) {
-                console.log("Musik belum dapat diputar:", error);
+
+                console.log(
+                    "Musik tidak dapat diputar:",
+                    error
+                );
+
             });
+
         }
+
     }
 
-    // Scroll menuju isi
+
+    /* -----------------------------------------
+       PINDAH KE HALAMAN ISI
+    ----------------------------------------- */
+
     setTimeout(function () {
 
         isi.scrollIntoView({
@@ -53,73 +113,268 @@ function bukaUndangan() {
             block: "start"
         });
 
-    }, 100);
+    }, 150);
 
 }
 
 
 /* =========================================================
-   CEGAH SCROLL SAAT COVER
+   4. CEGAH SCROLL SAAT COVER
 ========================================================= */
 
 document.addEventListener("wheel", function (e) {
 
-    if (document.body.classList.contains("lock-scroll")) {
+    if (
+        document.body.classList.contains("lock-scroll")
+    ) {
+
         e.preventDefault();
+
     }
 
-}, { passive: false });
-
-
-document.addEventListener("touchmove", function (e) {
-
-    if (document.body.classList.contains("lock-scroll")) {
-        e.preventDefault();
-    }
-
-}, { passive: false });
+}, {
+    passive: false
+});
 
 
 /* =========================================================
-   CEGAH TOMBOL PANAH / SPACE / PAGE DOWN
+   5. CEGAH TOUCH SCROLL HP
+========================================================= */
+
+document.addEventListener("touchmove", function (e) {
+
+    if (
+        document.body.classList.contains("lock-scroll")
+    ) {
+
+        e.preventDefault();
+
+    }
+
+}, {
+    passive: false
+});
+
+
+/* =========================================================
+   6. CEGAH KEYBOARD SCROLL
 ========================================================= */
 
 document.addEventListener("keydown", function (e) {
 
-    if (!document.body.classList.contains("lock-scroll")) {
+    if (
+        !document.body.classList.contains("lock-scroll")
+    ) {
+
         return;
+
     }
 
     const tombolScroll = [
+
         "ArrowUp",
         "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
         "PageUp",
         "PageDown",
         "Home",
         "End",
         " "
+
     ];
 
+
     if (tombolScroll.includes(e.key)) {
+
         e.preventDefault();
+
     }
 
 });
 
-// Countdown
-const target = new Date("2026-09-13T07:00:00+07:00").getTime();
 
-setInterval(() => {
-    const now = new Date().getTime();
-    const selisih = target - now;
+/* =========================================================
+   7. COUNTDOWN
+========================================================= */
 
-    const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
-    const jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
-    const detik = Math.floor((selisih % (1000 * 60)) / 1000);
+function mulaiCountdown() {
 
-    document.getElementById("hari").innerHTML = hari;
-    document.getElementById("jam").innerHTML = jam;
-    document.getElementById("menit").innerHTML = menit;
-    document.getElementById("detik").innerHTML = detik;
-}, 1000);
+    const target =
+        new Date(
+            "2026-09-13T07:00:00+07:00"
+        ).getTime();
+
+
+    function updateCountdown() {
+
+        const sekarang =
+            new Date().getTime();
+
+        const selisih =
+            target - sekarang;
+
+
+        const hariElement =
+            document.getElementById("hari");
+
+        const jamElement =
+            document.getElementById("jam");
+
+        const menitElement =
+            document.getElementById("menit");
+
+        const detikElement =
+            document.getElementById("detik");
+
+
+        if (
+            !hariElement ||
+            !jamElement ||
+            !menitElement ||
+            !detikElement
+        ) {
+
+            return;
+
+        }
+
+
+        /* -----------------------------------------
+           JIKA WAKTU SUDAH LEWAT
+        ----------------------------------------- */
+
+        if (selisih <= 0) {
+
+            hariElement.textContent = "00";
+            jamElement.textContent = "00";
+            menitElement.textContent = "00";
+            detikElement.textContent = "00";
+
+            return;
+
+        }
+
+
+        /* -----------------------------------------
+           HITUNG WAKTU
+        ----------------------------------------- */
+
+        const hari =
+            Math.floor(
+                selisih /
+                (1000 * 60 * 60 * 24)
+            );
+
+
+        const jam =
+            Math.floor(
+                (selisih %
+                    (1000 * 60 * 60 * 24))
+                /
+                (1000 * 60 * 60)
+            );
+
+
+        const menit =
+            Math.floor(
+                (selisih %
+                    (1000 * 60 * 60))
+                /
+                (1000 * 60)
+            );
+
+
+        const detik =
+            Math.floor(
+                (selisih %
+                    (1000 * 60))
+                /
+                1000
+            );
+
+
+        /* -----------------------------------------
+           TAMPILKAN
+        ----------------------------------------- */
+
+        hariElement.textContent =
+            String(hari).padStart(2, "0");
+
+        jamElement.textContent =
+            String(jam).padStart(2, "0");
+
+        menitElement.textContent =
+            String(menit).padStart(2, "0");
+
+        detikElement.textContent =
+            String(detik).padStart(2, "0");
+
+    }
+
+
+    // Jalankan langsung
+    updateCountdown();
+
+
+    // Update setiap detik
+    setInterval(
+        updateCountdown,
+        1000
+    );
+
+}
+
+
+/* =========================================================
+   8. SALIN REKENING LASAN
+========================================================= */
+
+function copyRekening1() {
+
+    const rekening = "0131794061";
+
+    navigator.clipboard.writeText(rekening)
+        .then(function () {
+
+            alert(
+                "Nomor rekening Lasan berhasil disalin."
+            );
+
+        })
+        .catch(function () {
+
+            alert(
+                "Gagal menyalin nomor rekening."
+            );
+
+        });
+
+}
+
+
+/* =========================================================
+   9. SALIN REKENING MAYA
+========================================================= */
+
+function copyRekening2() {
+
+    const rekening = "3024375551";
+
+    navigator.clipboard.writeText(rekening)
+        .then(function () {
+
+            alert(
+                "Nomor rekening Maya berhasil disalin."
+            );
+
+        })
+        .catch(function () {
+
+            alert(
+                "Gagal menyalin nomor rekening."
+            );
+
+        });
+
+}
