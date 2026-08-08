@@ -1,0 +1,1912 @@
+/* =========================================================
+   STYLE.CSS FINAL — LASAN & MAYA
+   Wedding Invitation
+   Cocok dengan index.html FINAL
+========================================================= */
+
+
+/* =========================================================
+   1. VARIABLE
+========================================================= */
+
+:root {
+    --gold: #d4af37;
+    --gold-dark: #b8860b;
+    --gold-soft: #c49b3d;
+
+    --cream: #f8f1e8;
+    --cream-light: #fffaf2;
+
+    --white: #ffffff;
+    --text: #333333;
+    --text-soft: #795744;
+
+    --brown: #8b6b45;
+    --brown-dark: #7d6442;
+    --rose: #a86f55;
+
+    --shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+
+    --shadow-soft:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   3. HTML & BODY
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+
+    margin: 0;
+
+    color: var(--text);
+
+    background: var(--cream);
+
+    font-family: Georgia, serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   4. BACKGROUND UTAMA
+========================================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+        url("images/bg3.png");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    z-index: -3;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 250, 242, 0.18),
+            rgba(255, 248, 238, 0.38)
+        );
+
+    pointer-events: none;
+
+    z-index: -2;
+}
+
+
+/* =========================================================
+   5. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(32px, 7vw, 50px);
+}
+
+h2 {
+    margin-bottom: 10px;
+
+    font-size: clamp(26px, 5vw, 36px);
+}
+
+h3 {
+    font-size: clamp(17px, 4vw, 22px);
+}
+
+h5 {
+    font-size: clamp(11px, 3vw, 14px);
+
+    line-height: 1.5;
+}
+
+p {
+    font-size: clamp(15px, 3.8vw, 18px);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   6. GOOGLE FONT
+========================================================= */
+
+.hero-title .subtitle,
+.hero-title .tanggal,
+.ayat,
+.sumber-ayat,
+.biodata-mempelai h2 {
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+}
+
+.nama-pengantin,
+.we-found-love {
+    font-family:
+        "Great Vibes",
+        cursive;
+}
+
+
+/* =========================================================
+   7. CONTAINER
+========================================================= */
+
+.container {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+
+    position: fixed;
+
+    width: 350px;
+
+    height: 350px;
+
+    top: 10%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212, 175, 55, 0.12),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   8. FLOATING HEARTS
+========================================================= */
+
+.hearts {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+.hearts span {
+    position: absolute;
+
+    bottom: -50px;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 20px;
+
+    animation:
+        love 12s linear infinite;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+}
+
+.hearts span:nth-child(2) {
+    left: 30%;
+
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 50%;
+
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 70%;
+
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 90%;
+
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(6) {
+    left: 40%;
+
+    animation-delay: 5s;
+}
+
+@keyframes love {
+
+    0% {
+        transform:
+            translateY(0)
+            scale(0.8);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            scale(1.2);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   9. COVER
+========================================================= */
+
+#cover {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        url("images/lasan.jpg")
+        center / cover
+        no-repeat;
+
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.45);
+}
+
+.cover-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    padding: 25px;
+
+    color: var(--white);
+}
+
+.cover-content .judul {
+    letter-spacing: 4px;
+
+    font-size: clamp(14px, 3vw, 20px);
+}
+
+.cover-content h1 {
+    margin: 20px 0;
+
+    font-size: clamp(35px, 9vw, 55px);
+
+    text-shadow:
+        0 5px 15px #000;
+}
+
+.cover-content h1 span {
+    color: var(--gold);
+}
+
+.cover-content .tanggal {
+    letter-spacing: 2px;
+}
+
+.kepada {
+    width: min(100%, 350px);
+
+    margin: 25px auto;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255, 255, 255, 0.20);
+
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* =========================================================
+   10. BUTTON UMUM
+========================================================= */
+
+button {
+    border: none;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    background: var(--gold);
+
+    color: var(--white);
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 20px
+        rgba(212, 175, 55, 0.35);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   11. ISI
+========================================================= */
+
+#isi {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 1px 15px;
+}
+
+
+/* =========================================================
+   12. HERO
+========================================================= */
+
+.hero {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 80px 20px 60px;
+
+    text-align: center;
+}
+
+
+/* SUBTITLE */
+
+.hero-title .subtitle {
+    margin: 0 0 12px;
+
+    font-size: clamp(15px, 4vw, 20px);
+
+    letter-spacing: 5px;
+
+    color: #9b7628;
+
+    text-transform: uppercase;
+}
+
+
+/* NAMA PENGANTIN */
+
+.nama-pengantin {
+    margin: 0;
+
+    font-size:
+        clamp(55px, 13vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    color: var(--rose);
+
+    text-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.08);
+}
+
+.nama-pengantin span {
+    color: var(--gold-soft);
+
+    margin: 0 8px;
+}
+
+
+/* TANGGAL */
+
+.hero-title .tanggal {
+    margin: 18px 0 12px;
+
+    font-size: 16px;
+
+    letter-spacing: 4px;
+
+    color: var(--brown);
+}
+
+
+/* FOTO HERO */
+
+.hero-photo {
+    width: 100%;
+
+    max-width: 430px;
+
+    margin: 50px auto 0;
+
+    overflow: hidden;
+
+    border:
+        3px solid
+        var(--gold-soft);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.15);
+}
+
+.hero-photo img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+
+/* HATI */
+
+.ornamen-hati {
+    margin: 15px 0;
+
+    font-size: 25px;
+
+    color: var(--gold-soft);
+
+    text-shadow:
+        0 2px 8px
+        rgba(196, 155, 61, 0.25);
+}
+
+
+/* WE FOUND LOVE */
+
+.we-found-love {
+    margin: 0 0 12px;
+
+    font-size:
+        clamp(42px, 9vw, 65px);
+
+    font-weight: 400;
+
+    color: #b47761;
+}
+
+
+/* =========================================================
+   13. GARIS ORNAMEN
+========================================================= */
+
+.garis-ornamen {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 90%;
+
+    max-width: 400px;
+
+    margin: 0 auto 25px;
+
+    color: var(--gold-soft);
+}
+
+.garis-ornamen i {
+    display: block;
+
+    width: min(80px, 18vw);
+
+    height: 1px;
+
+    background:
+        var(--gold-soft);
+}
+
+.garis-ornamen span {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   14. AYAT
+========================================================= */
+
+.ayat {
+    width: 100%;
+
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    font-size:
+        clamp(17px, 4.5vw, 20px);
+
+    line-height: 1.6;
+
+    color: var(--text-soft);
+
+    text-align: center;
+}
+
+.sumber-ayat {
+    margin-top: 15px;
+
+    font-size: 16px;
+
+    color: var(--text-soft);
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   15. MEMPELAI
+========================================================= */
+
+.mempelai {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+
+    width: 100%;
+
+    padding: 30px 15px;
+}
+
+
+/* CARD MEMPELAI */
+
+.card-mempelai {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    min-height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 25px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: var(--shadow);
+
+    overflow: visible;
+}
+
+
+/* FOTO MEMPELAI */
+
+.card-mempelai > img:not(
+    .ornamen-bunga-pria
+):not(
+    .ornamen-bunga-wanita
+) {
+    width: 130px;
+
+    height: 160px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border:
+        3px solid
+        var(--gold);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+/* BIODATA */
+
+.biodata-mempelai {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.biodata-mempelai h2 {
+    margin-bottom: 8px;
+
+    font-size: 32px;
+
+    color: #9b7628;
+}
+
+.biodata-mempelai h5 {
+    margin-bottom: 8px;
+
+    color: #795744;
+}
+
+.biodata-mempelai p {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #555;
+}
+
+
+/* PRIA */
+
+.card-mempelai.pria {
+    text-align: left;
+}
+
+
+/* WANITA */
+
+.card-mempelai.wanita {
+    justify-content: flex-end;
+
+    text-align: right;
+}
+
+.card-mempelai.wanita .biodata-mempelai {
+    text-align: right;
+}
+
+
+/* LOVE */
+
+.mempelai .love {
+    font-size: 35px;
+
+    line-height: 1;
+
+    color: var(--gold);
+
+    text-shadow:
+        0 3px 10px
+        rgba(212, 175, 55, 0.3);
+}
+
+
+/* =========================================================
+   16. ORNAMEN BUNGA MEMPELAI
+========================================================= */
+
+.ornamen-bunga-pria,
+.ornamen-bunga-wanita {
+    position: absolute !important;
+
+    width: 300px !important;
+
+    height: auto !important;
+
+    object-fit: contain !important;
+
+    border: none !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+.ornamen-bunga-pria {
+    right: -45px;
+
+    bottom: -45px;
+}
+
+.ornamen-bunga-wanita {
+    left: -50px;
+
+    bottom: -50px;
+}
+
+
+/* =========================================================
+   17. LOKASI
+========================================================= */
+
+.lokasi {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+.lokasi p {
+    max-width: 600px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+.lokasi h2 {
+    color: #8b6b25;
+}
+
+
+/* =========================================================
+   18. GOOGLE MAPS
+========================================================= */
+
+.maps {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    background: var(--gold);
+
+    color: var(--white);
+
+    font-size: 15px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.maps:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(212, 175, 55, 0.3);
+}
+
+
+/* =========================================================
+   19. STORY
+========================================================= */
+
+.story {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+.story > h2 {
+    color: #8b6b25;
+}
+
+
+/* =========================================================
+   20. WELCOME
+========================================================= */
+
+.welcome {
+    width: 100%;
+
+    padding: 30px 10px;
+
+    text-align: center;
+}
+
+.welcome h2 {
+    color: #8b6b25;
+}
+
+
+/* =========================================================
+   21. TIMELINE
+========================================================= */
+
+.timeline {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.80);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    border-radius:
+        20px 20px 0 0;
+
+    background: var(--gold);
+}
+
+.timeline h2,
+.timeline h3 {
+    color: #8b6b25;
+}
+
+.timeline p {
+    color: #555;
+}
+
+
+/* =========================================================
+   22. GALERI
+========================================================= */
+
+.galeri {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+}
+
+.galeri img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: auto;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px
+        rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.galeri img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   23. COUNTDOWN
+========================================================= */
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 25px 5px;
+}
+
+.box {
+    width: 78px;
+
+    height: 78px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--gold),
+            var(--gold-dark)
+        );
+
+    color: var(--white);
+
+    box-shadow:
+        0 8px 18px
+        rgba(184, 134, 11, 0.25);
+}
+
+.box span {
+    font-size: 27px;
+
+    font-weight: bold;
+}
+
+.box small {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   24. GIFT
+========================================================= */
+
+.gift {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+.gift h2 {
+    color: #8b6b25;
+}
+
+.gift > p {
+    max-width: 600px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+.gift-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+.gift-card {
+    width: min(100%, 320px);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: var(--shadow);
+}
+
+.gift-card img {
+    display: block;
+
+    width: 80px;
+
+    margin: 0 auto 10px;
+}
+
+.gift-card h3 {
+    color: #8b6b25;
+}
+
+.gift-card .rekening {
+    margin-top: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   25. RSVP
+========================================================= */
+
+.rsvp {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 40px auto;
+
+    padding: 30px 25px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+.rsvp h2 {
+    color: #8b6b25;
+}
+
+.input-group {
+    width: 100%;
+
+    margin-bottom: 15px;
+
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+
+    color: #555;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 14px;
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.25);
+
+    border-radius: 15px;
+
+    outline: none;
+
+    background: #fffaf0;
+
+    color: #333;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    transition:
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.input-group textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 10px
+        rgba(212, 175, 55, 0.35);
+}
+
+.btn-rsvp {
+    width: 100%;
+}
+
+
+/* =========================================================
+   26. DAFTAR UCAPAN
+========================================================= */
+
+#listUcapan {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+.ucapan-item {
+    padding: 18px;
+
+    border-left:
+        5px solid
+        var(--gold);
+
+    border-radius: 20px;
+
+    background: var(--white);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.08);
+
+    text-align: left;
+}
+
+.ucapan-item h3 {
+    margin: 0;
+
+    font-size: 21px;
+
+    color: #8b6b25;
+}
+
+.ucapan-item small {
+    display: block;
+
+    margin: 5px 0 12px;
+
+    color: #777;
+}
+
+.ucapan-item p {
+    margin: 0;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   27. TOMBOL HAPUS RSVP
+========================================================= */
+
+.hapus-btn {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #d9534f;
+
+    color: var(--white);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hapus-btn:hover {
+    background: #b52b27;
+}
+
+
+/* =========================================================
+   28. THANKS
+========================================================= */
+
+.thanks {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.thanks-card {
+    width: min(92%, 600px);
+
+    margin: auto;
+
+    padding: 50px 35px;
+
+    border-radius: 35px;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+/* ORNAMEN */
+
+.ornamen {
+    margin-bottom: 10px;
+
+    font-size: 34px;
+
+    color: #c8a33d;
+}
+
+.thanks h2 {
+    margin-bottom: 20px;
+
+    font-size:
+        clamp(34px, 8vw, 42px);
+
+    color: #8b6b25;
+}
+
+.thanks-text {
+    margin-bottom: 20px;
+
+    font-size:
+        clamp(16px, 4vw, 18px);
+
+    line-height: 1.9;
+}
+
+.closing {
+    margin-bottom: 5px;
+
+    color: #666;
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+.thanks .couple-name {
+    margin-top: 20px;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        clamp(38px, 9vw, 50px);
+
+    font-weight: 400;
+
+    color: #333;
+}
+
+.thanks .couple-name span {
+    color: var(--gold);
+}
+
+.thanks .date {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #888;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   29. RESPONSIVE — TABLET
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    #isi {
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+    .card-mempelai {
+        max-width: 620px;
+    }
+
+    .hero {
+        padding-left: 30px;
+
+        padding-right: 30px;
+    }
+
+    .galeri {
+        gap: 15px;
+    }
+}
+
+
+/* =========================================================
+   30. RESPONSIVE — HP
+========================================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* COVER */
+
+    #cover {
+        min-height: 100svh;
+    }
+
+    .cover-content {
+        padding: 20px 15px;
+    }
+
+    .cover-content h1 {
+        font-size:
+            clamp(34px, 10vw, 44px);
+    }
+
+    .kepada {
+        margin-top: 20px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* ISI */
+
+    #isi {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding:
+            60px 10px 45px;
+    }
+
+    .hero-title .subtitle {
+        letter-spacing: 3px;
+
+        font-size: 15px;
+    }
+
+    .nama-pengantin {
+        font-size:
+            clamp(50px, 15vw, 72px);
+    }
+
+    .hero-title .tanggal {
+        font-size: 14px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero-photo {
+        margin-top: 35px;
+
+        border-radius: 28px;
+    }
+
+    .ayat {
+        font-size: 17px;
+
+        line-height: 1.55;
+    }
+
+
+    /* MEMPELAI */
+
+    .mempelai {
+        padding:
+            25px 5px;
+
+        gap: 15px;
+    }
+
+    .card-mempelai {
+        gap: 12px;
+
+        padding:
+            15px;
+
+        border-radius: 22px;
+    }
+
+    .card-mempelai > img:not(
+        .ornamen-bunga-pria
+    ):not(
+        .ornamen-bunga-wanita
+    ) {
+        width: 95px;
+
+        height: 125px;
+
+        border-radius: 18px;
+    }
+
+    .biodata-mempelai h2 {
+        font-size: 27px;
+
+        margin-bottom: 4px;
+    }
+
+    .biodata-mempelai h5 {
+        font-size: 11px;
+    }
+
+    .biodata-mempelai p {
+        font-size: 12.5px;
+
+        line-height: 1.5;
+    }
+
+    .mempelai .love {
+        font-size: 28px;
+    }
+
+
+    /* BUNGA */
+
+    .ornamen-bunga-pria,
+    .ornamen-bunga-wanita {
+        width: 210px !important;
+    }
+
+    .ornamen-bunga-pria {
+        right: -35px;
+
+        bottom: -35px;
+    }
+
+    .ornamen-bunga-wanita {
+        left: -35px;
+
+        bottom: -35px;
+    }
+
+
+    /* LOKASI */
+
+    .lokasi {
+        padding:
+            30px 10px;
+    }
+
+    .lokasi p {
+        font-size: 15px;
+    }
+
+
+    /* STORY */
+
+    .story {
+        padding:
+            30px 5px;
+    }
+
+
+    /* TIMELINE */
+
+    .timeline {
+        padding:
+            30px 18px;
+
+        border-radius: 18px;
+    }
+
+    .timeline p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* GALERI */
+
+    .galeri {
+        gap: 8px;
+    }
+
+    .galeri img {
+        border-radius: 14px;
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown {
+        gap: 7px;
+
+        padding:
+            20px 0;
+    }
+
+    .box {
+        width: 65px;
+
+        height: 65px;
+
+        border-radius: 15px;
+    }
+
+    .box span {
+        font-size: 22px;
+    }
+
+    .box small {
+        font-size: 10px;
+    }
+
+
+    /* GIFT */
+
+    .gift {
+        padding:
+            30px 5px;
+    }
+
+    .gift-card {
+        width: 100%;
+
+        max-width: 340px;
+    }
+
+
+    /* RSVP */
+
+    .rsvp {
+        width: 100%;
+
+        margin:
+            30px auto;
+
+        padding:
+            25px 15px;
+
+        border-radius: 20px;
+    }
+
+
+    /* THANKS */
+
+    .thanks {
+        padding:
+            60px 5px;
+    }
+
+    .thanks-card {
+        width: 100%;
+
+        padding:
+            40px 20px;
+
+        border-radius: 28px;
+    }
+}
+
+
+/* =========================================================
+   31. RESPONSIVE — HP SANGAT KECIL
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .cover-content {
+        padding:
+            15px 10px;
+    }
+
+    .cover-content h1 {
+        font-size: 32px;
+    }
+
+    .nama-pengantin {
+        font-size: 48px;
+    }
+
+    .hero-title .subtitle {
+        font-size: 13px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-title .tanggal {
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+    .card-mempelai {
+        gap: 9px;
+
+        padding: 12px;
+    }
+
+    .card-mempelai > img:not(
+        .ornamen-bunga-pria
+    ):not(
+        .ornamen-bunga-wanita
+    ) {
+        width: 82px;
+
+        height: 110px;
+    }
+
+    .biodata-mempelai h2 {
+        font-size: 24px;
+    }
+
+    .biodata-mempelai h5 {
+        font-size: 10px;
+    }
+
+    .biodata-mempelai p {
+        font-size: 11px;
+    }
+
+    .ornamen-bunga-pria,
+    .ornamen-bunga-wanita {
+        width: 180px !important;
+    }
+
+    .box {
+        width: 58px;
+
+        height: 58px;
+    }
+
+    .box span {
+        font-size: 19px;
+    }
+
+    .box small {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   32. HP LANDSCAPE
+========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    #cover {
+        min-height: 100vh;
+    }
+
+    .cover-content {
+        padding:
+            15px;
+    }
+
+    .cover-content h1 {
+        margin:
+            10px 0;
+    }
+
+    .kepada {
+        margin:
+            10px auto;
+    }
+}
+
+
+/* =========================================================
+   33. REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
