@@ -653,18 +653,18 @@ button:hover {
 
 .ornamen-bunga-pria {
     right:
-        clamp(-45px, -8vw, -60px);
+        clamp(-45px, -8vw, -70px);
 
     bottom:
-        clamp(-45px, -8vw, -25px);
+        clamp(-45px, -8vw, -30px);
 }
 
 .ornamen-bunga-wanita {
     left:
-        clamp(-45px, -8vw, -60px);
+        clamp(-45px, -8vw, -70px);
 
     bottom:
-        clamp(-40px, -8vw, -25px);
+        clamp(-40px, -8vw, -30px);
 }
 
 /* =========================================================
