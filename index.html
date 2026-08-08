@@ -1,454 +1,876 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Lasan & Maya</title>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS Utama -->
     <link rel="stylesheet" href="style.css">
-    <meta property="og:title" content="💍 Lasan & Maya | The Wedding Invitation">
-<meta property="og:description" content="Dengan penuh rasa syukur kami mengundang Bapak/Ibu/Saudara/i untuk hadir di hari bahagia kami • 13 September 2026">
-<meta property="og:image" content="https://lhasaennadiera18.github.io/Undangan13sep/images/lasan.jpg">
-<meta property="og:url" content="https://lhasaennadiera18.github.io/Undangan13sep/">
-<meta property="og:type" content="website">
 
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="💍 Lasan & Maya | The Wedding Invitation">
 
-<!-- baru isi-->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <meta property="og:description"
+          content="Dengan penuh rasa syukur kami mengundang Bapak/Ibu/Saudara/i untuk hadir di hari bahagia kami • 13 September 2026">
+
+    <meta property="og:image"
+          content="https://lhasaennadiera18.github.io/Undangan13sep/images/lasan.jpg">
+
+    <meta property="og:url"
+          content="https://lhasaennadiera18.github.io/Undangan13sep/">
+
+    <meta property="og:type"
+          content="website">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap"
+          rel="stylesheet">
 </head>
+
+
 <body>
-  <div class="container">
-  <div class="hearts">
-    <span>❤</span>
-    <span>❤</span>
-    <span>❤</span>
-    <span>❤</span>
-    <span>❤</span>
-    <span>❤</span>
-    
-</div>
 
-<!-- Cover -->
-<section id="cover">
+<div class="container">
 
-   <div class="overlay"></div>
 
-    <div class="cover-content">
-      
-        <p class="judul">
-            THE WEDDING OF
-        </p>
+    <!-- =========================================
+         ANIMASI HATI
+    ========================================== -->
 
-        <h1>
-            Lasan <span>&</span> Maya
-        </h1>
+    <div class="hearts">
 
-        <p class="tanggal">
-            13 September 2026
-        </p>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
 
-        <div class="kepada">
-            Kepada Yth.
-            <br>
-            <strong id="namaTamu">Tamu Undangan</strong>
+    </div>
+
+
+    <!-- =========================================
+         COVER
+    ========================================== -->
+
+    <section id="cover">
+
+        <div class="overlay"></div>
+
+        <div class="cover-content">
+
+            <p class="judul">
+                THE WEDDING OF
+            </p>
+
+            <h1>
+                Lasan <span>&</span> Maya
+            </h1>
+
+            <p class="tanggal">
+                13 September 2026
+            </p>
+
+            <div class="kepada">
+
+                Kepada Yth.
+                <br>
+
+                <strong id="namaTamu">
+                    Tamu Undangan
+                </strong>
+
+            </div>
+
+            <button onclick="bukaUndangan()">
+                💖 Buka Undangan
+            </button>
+
         </div>
 
-        <button onclick="bukaUndangan()">
-            💖 Buka Undangan
-        </button>
-
-    </div>
-
-</section>
-
-<!-- Isi -->
-<section class="hero">
-
-    <div class="hero-title">
-
-        <p class="subtitle">
-            THE WEDDING OF
-        </p>
-
-        <h1 class="nama-pengantin">
-            Lasan <span>&amp;</span> Maya
-        </h1>
-
-        <p class="tanggal">
-            13 SEPTEMBER 2026
-        </p>
-<div class="hero-photo">
-        <img src="images/foto_lasan_maya_saja.png" alt="Lasan & Maya">
-    </div>
-        <div class="ornamen-hati">
-            ♥
-        </div>
-
-        <h2 class="we-found-love">
-            We Found Love
-        </h2>
-
-        <div class="garis-ornamen">
-            <span>◆</span>
-            <i></i>
-            <span>♥</span>
-            <i></i>
-            <span>◆</span>
-        </div>
-
-        <p class="ayat">
-            “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
-            menciptakan pasangan-pasangan untukmu dari jenismu
-            sendiri, agar kamu cenderung dan merasa tenteram
-            kepadanya, dan Dia menjadikan di antaramu rasa kasih
-            dan sayang. Sungguh, pada yang demikian itu benar-benar
-            terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
-            berpikir”
-        </p>
-
-        <p class="sumber-ayat">
-            (QS. Ar-Rum Ayat 21)
-        </p>
-
-    </div>
-
-
-</section>
-<div id="isi">
-</div>
-
-<!-- MEMPELAI -->
-<section class="mempelai">
-    <!-- MEMPELAI PRIA -->
-  <div class="card-mempelai pria">
-
-    <img src="images/lasan.jpg" alt="Lasan">
-
-    <div class="biodata-mempelai">
-        <h2>Lasan</h2>
-        <p>
-            Putra Bapak Junaidi (Alm)<br>
-            Ibu Suharni
-        </p>
-    </div>
-
-    <img
-        class="ornamen-bunga-pria"
-        src="images/bunga-pria.png"
-        alt=""
-    >
-
-</div>
-
-
-    <!-- LOVE -->
-    <div class="love">
-        ❤
-    </div>
-
-
-    <!-- MEMPELAI WANITA -->
-    <div class="card-mempelai wanita">
-
-    <div class="biodata-mempelai">
-        <h2>Maya</h2>
-
-        <p>
-            Putri Bapak Sutrisno<br>
-            Ibu Hermin Sulistyowati
-        </p>
-    </div>
-
-    <img
-        src="images/lasan.jpg"
-        alt="Maya"
-    >
-
-    <img
-        class="ornamen-bunga-wanita"
-        src="images/bunga-wanita.png"
-        alt=""
-    >
-
-</div>
-</section>
-
-
-<!-- akad -->
-<section class="lokasi">
- <p>
-        Kami berharap kehadiran Bapak/Ibu/Saudara/i
-        untuk memberikan doa restu.
-    </p>
-    <br>
-    <h2>Lokasi Acara</h2>
-    <br>
-    <p>Jalan Rahtawu Raya, Gang 21, Desa Gondosari RT 2 RW 7, Kecamatan Gebog, Kabupaten Kudus.</p>
-    <a class="maps"
-       href="https://www.google.com/maps?q=-6.728277,110.846766"
-       target="_blank">
-        📍 Buka Google Maps
-    </a>
     </section>
-<section class="story">
-
-    <h2>Love Story</h2>
-<h2>Galeri</h2>
-<br>
-<div class="galeri">
-
-<img src="images/img2.jpg">
-<img src="images/Img8.jpg">
-<img src="images/bajuputih.jpg">
-<img src="images/bajuhitam.jpg">
-</div>
-
-<!-- story love --->
-<section class="welcome">
-        <div class="garis-ornamen">
-            <span>◆</span>
-            <i></i>
-            <span>♥</span>
-            <i></i>
-            <span>◆</span>
-        </div>
-
-    <div class="timeline">
-        <h3>💛 Awal Bertemu</h3>
-        <p>  Pada April 2017, kami pertama kali bertemu.
-            Dari perkenalan sederhana, tumbuh rasa saling
-            mengenal dan saling mendukung hingga akhirnya 
-            kami memutuskan untuk melangkah bersama menuju
-            jenjang pernikahan.</p>
-    </div>
-
-    <div class="timeline">
-        <h3>💍 Lamaran</h3>
-        <p>Setelah melalui perjalanan
-            yang penuh cerita, kami memantapkan hati
-            untuk melangkah ke tahap yang lebih serius. 
-            Dengan penuh rasa syukur dan restu kedua
-            keluarga, kami melangsungkan acara 
-            lamaran pada Juli 2026, 
-            sebagai wujudkan kesungguhan untuk melangkah
-            bersama menuju pernikahan.</p>
-    </div>
-
-    <div class="timeline">
-        <h3>🤍 Menikah</h3>
-        <p>Menikah Pada September 2026, 
-        dengan izin Allah SWT serta doa dan 
-            restu kedua orang tua, 
-            kami mengikat janji suci pernikahan 
-            sebagai awal perjalanan baru untuk 
-            membangun keluarga yang sakinah, 
-            mawaddah, warahmah.</p>
-    </div>
-    <!--- resepsi dan resepsi --->
-    <div class="garis-ornamen">
-            <span>◆</span>
-            <i></i>
-            <span>♥</span>
-            <i></i>
-            <span>◆</span>
-        </div>
-        <!-- countdown --->
-<section class="welcome">
-  <h2>Our Happy Day</h2>
-
-<div class="countdown">
-
-    <div class="box">
-        <span id="hari">00</span>
-        <small>Hari</small>
-    </div>
-
-    <div class="box">
-        <span id="jam">00</span>
-        <small>Jam</small>
-    </div>
-
-    <div class="box">
-        <span id="menit">00</span>
-        <small>Menit</small>
-    </div>
-
-    <div class="box">
-        <span id="detik">00</span>
-        <small>Detik</small>
-    </div>
-</div>
-    <div class="timeline">
-    <h2>Akad</h2>
-    <h3>13 September 2026</h3>
-    <p>Pukul 07.00 WIB</p>
-    <br>
-    <h3>Kediaman Mempelai Wanita</h3>
-    <p>Jalan Rahtawu Raya, Gang 21, Desa Gondosari RT 2 RW 7, Kecamatan Gebog, Kabupaten Kudus.</p>
-        <a class="maps"
-       href="https://www.google.com/maps?q=-6.728277,110.846766"
-       target="_blank">
-        📍 Buka Google Maps
-    </a>
-    </div>
-  
 
 
-        <div class="timeline">
+    <!-- =========================================
+         ISI UNDANGAN
+    ========================================== -->
 
-    <h2>Resepsi</h2>
+    <div id="isi">
 
-    <h3>13 September 2026</h3>
 
-    <p>Pukul 13.00 WIB - Selesai</p>
-    <br>
-    <h3>Kediaman Mempelai Wanita</h3>
-    <p>Jalan Rahtawu Raya, Gang 21, Desa Gondosari RT 2 RW 7, Kecamatan Gebog, Kabupaten Kudus.</p>
-        <a class="maps"
-       href="https://www.google.com/maps?q=-6.728277,110.846766"
-       target="_blank">
-        📍 Buka Google Maps
-    </a>
-    </div>
-</section>
+        <!-- =====================================
+             HERO
+        ====================================== -->
 
-<div>
-    <h2>
-        Selamat Datang
-    </h2>
-    <p>
-        Terima kasih telah membuka undangan kami.
-    </p>
-</div>
+        <section class="hero">
 
-<!-- kirim hadiah -->
-<section class="gift">
-    <h2>🎁 Kirim Hadiah</h2>
-    <p>Doa restu Anda merupakan hadiah terindah bagi kami. Namun apabila ingin memberikan tanda kasih, dapat melalui:</p>
-   <br>
-<div class="gift-container">
+            <div class="hero-title">
 
-    <div class="gift-card">
-        <img src="images/bca.png">
-        <h3>Bank BCA</h3>
-        <p class="rekening">
-            0131794061
-        </p>
-        <p>a.n. Lasan Nabihi</p>
+                <p class="subtitle">
+                    THE WEDDING OF
+                </p>
 
-        <button onclick="copyRekening1()">
-    📋 Salin Nomor Rekening
-</button>
-    </div>
-    <div class="gift-card">
-        <img src="images/bca.png">
-        <h3>Bank BCA</h3>
-        <p class="rekening">
-            0131794061
-        </p>
-        <p>a.n. Maya</p>
+                <h1 class="nama-pengantin">
+                    Lasan <span>&amp;</span> Maya
+                </h1>
 
-    <button onclick="copyRekening2()">
-    📋 Salin Nomor Rekening
-</button>
-    </div>
-</div>
-</section>
+                <p class="tanggal">
+                    13 SEPTEMBER 2026
+                </p>
 
-<!-- rsvp -->
-<section class="rsvp" id="rsvp">
-    <h2>Konfirmasi Kehadiran</h2>
-    <p>Mohon konfirmasi kehadiran Anda pada acara pernikahan kami.</p>
+                <div class="hero-photo">
 
-    <form id="rsvpForm">
+                    <img src="images/foto_lasan_maya_saja.png"
+                         alt="Lasan & Maya">
 
-        <div class="input-group">
-            <label>Nama</label>
-            <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
-        </div>
+                </div>
 
-        <div class="input-group">
-            <label>Kehadiran</label>
-            <select id="status" required>
-                <option value="">-- Pilih Kehadiran --</option>
-                <option value="Hadir">✅ Hadir</option>
-                <option value="Tidak Hadir">❌ Tidak Hadir</option>
-            </select>
-        </div>
+                <div class="ornamen-hati">
+                    ♥
+                </div>
 
-        <div class="input-group">
-            <label>Jumlah Tamu</label>
-            <input type="number" id="jumlah" min="1" max="10" value="1">
-        </div>
+                <h2 class="we-found-love">
+                    We Found Love
+                </h2>
 
-        <div class="input-group">
-            <label>Ucapan & Doa</label>
-            <textarea id="ucapan" rows="5" placeholder="Tuliskan ucapan terbaik Anda..."></textarea>
-        </div>
+                <div class="garis-ornamen">
 
-        <button type="submit" class="btn-rsvp">
-            💌 Kirim RSVP
-        </button>
-        <section class="gift">
-          <h2>RSVP</h2>
+                    <span>◆</span>
+                    <i></i>
+                    <span>♥</span>
+                    <i></i>
+                    <span>◆</span>
+
+                </div>
+
+                <p class="ayat">
+                    “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+                    menciptakan pasangan-pasangan untukmu dari jenismu
+                    sendiri, agar kamu cenderung dan merasa tenteram
+                    kepadanya, dan Dia menjadikan di antaramu rasa kasih
+                    dan sayang. Sungguh, pada yang demikian itu benar-benar
+                    terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
+                    berpikir”
+                </p>
+
+                <p class="sumber-ayat">
+                    (QS. Ar-Rum Ayat 21)
+                </p>
+
+            </div>
+
         </section>
-        
-<div id="listUcapan" class=""></div>
-    </form>
-    
-</section>
 
 
+        <!-- =====================================
+             MEMPELAI
+        ====================================== -->
+
+        <section class="mempelai">
 
 
+            <!-- MEMPELAI PRIA -->
 
-<!-- penutup -->
-<section class="thanks">
+            <div class="card-mempelai pria">
 
-    <div class="thanks-card">
+                <img src="images/lasan.jpg"
+                     alt="Lasan">
 
-        <div class="ornamen">
-            <i class="fa-solid fa-heart"></i>
-        </div>
+                <div class="biodata-mempelai">
 
-        <h2>Terima Kasih</h2>
+                    <h2>
+                        Lasan
+                    </h2>
 
-        <p class="thanks-text">
-            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
-            Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.
-        </p>
+                    <h5>
+                        Lasan Nabihi, S.Kom
+                    </h5>
 
-        <p class="closing">
-            Wassalamu'alaikum
+                    <p>
+                        Putra Bapak Junaidi (Alm)<br>
+                        Ibu Suharni, S.Pd
+                    </p>
+
+                </div>
+
+                <img
+                    class="ornamen-bunga-pria"
+                    src="images/bunga-pria.png"
+                    alt=""
+                >
+
+            </div>
+
+
+            <!-- LOVE -->
+
+            <div class="love">
+                ❤
+            </div>
+
+
+            <!-- MEMPELAI WANITA -->
+
+            <div class="card-mempelai wanita">
+
+                <div class="biodata-mempelai">
+
+                    <h2>
+                        Maya
+                    </h2>
+
+                    <h5>
+                        Desta Maya Hermina W.,S.Pd.
+                    </h5>
+
+                    <p>
+                        Putri Bapak Drs. Sutrisno<br>
+                        Ibu Hermin Sulistyowati
+                    </p>
+
+                </div>
+
+                <img
+                    src="images/lasan.jpg"
+                    alt="Maya"
+                >
+
+                <img
+                    class="ornamen-bunga-wanita"
+                    src="images/bunga-wanita.png"
+                    alt=""
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             LOKASI ACARA
+        ====================================== -->
+
+        <section class="lokasi">
+
+            <p>
+                Kami berharap kehadiran Bapak/Ibu/Saudara/i
+                untuk memberikan doa restu.
+            </p>
+
             <br>
-            Warahmatullahi Wabarakatuh
-        </p>
 
-      
+            <h2>
+                Lokasi Acara
+            </h2>
 
-        <h3 class="couple-name">
-            Lasan <span>&</span> Maya
-        </h3>
+            <br>
 
-        <p class="date">
-            13 September 2026
-        </p>
+            <p>
+                Jalan Rahtawu Raya, Gang 21, Desa Gondosari
+                RT 2 RW 7, Kecamatan Gebog, Kabupaten Kudus.
+            </p>
+
+            <a class="maps"
+               href="https://www.google.com/maps?q=-6.728277,110.846766"
+               target="_blank">
+
+                📍 Buka Google Maps
+
+            </a>
+
+        </section>
+
+
+        <!-- =====================================
+             STORY & GALERI
+        ====================================== -->
+
+        <section class="story">
+
+            <h2>
+                Love Story
+            </h2>
+
+            <h2>
+                Galeri
+            </h2>
+
+            <br>
+
+
+            <!-- GALERI -->
+
+            <div class="galeri">
+
+                <img src="images/img2.jpg">
+
+                <img src="images/Img8.jpg">
+
+                <img src="images/bajuputih.jpg">
+
+                <img src="images/bajuhitam.jpg">
+
+            </div>
+
+
+            <!-- =================================
+                 LOVE STORY
+            ================================== -->
+
+            <section class="welcome">
+
+                <div class="garis-ornamen">
+
+                    <span>◆</span>
+                    <i></i>
+                    <span>♥</span>
+                    <i></i>
+                    <span>◆</span>
+
+                </div>
+
+
+                <!-- AWAL BERTEMU -->
+
+                <div class="timeline">
+
+                    <h3>
+                        💛 Awal Bertemu
+                    </h3>
+
+                    <p>
+                        Pada April 2017, kami pertama kali bertemu.
+                        Dari perkenalan sederhana, tumbuh rasa saling
+                        mengenal dan saling mendukung hingga akhirnya
+                        kami memutuskan untuk melangkah bersama menuju
+                        jenjang pernikahan.
+                    </p>
+
+                </div>
+
+
+                <!-- LAMARAN -->
+
+                <div class="timeline">
+
+                    <h3>
+                        💍 Lamaran
+                    </h3>
+
+                    <p>
+                        Setelah melalui perjalanan
+                        yang penuh cerita, kami memantapkan hati
+                        untuk melangkah ke tahap yang lebih serius.
+                        Dengan penuh rasa syukur dan restu kedua
+                        keluarga, kami melangsungkan acara
+                        lamaran pada Juli 2026,
+                        sebagai wujudkan kesungguhan untuk melangkah
+                        bersama menuju pernikahan.
+                    </p>
+
+                </div>
+
+
+                <!-- MENIKAH -->
+
+                <div class="timeline">
+
+                    <h3>
+                        🤍 Menikah
+                    </h3>
+
+                    <p>
+                        Menikah Pada September 2026,
+                        dengan izin Allah SWT serta doa dan
+                        restu kedua orang tua,
+                        kami mengikat janji suci pernikahan
+                        sebagai awal perjalanan baru untuk
+                        membangun keluarga yang sakinah,
+                        mawaddah, warahmah.
+                    </p>
+
+                </div>
+
+
+                <!-- ORNAMEN -->
+
+                <div class="garis-ornamen">
+
+                    <span>◆</span>
+                    <i></i>
+                    <span>♥</span>
+                    <i></i>
+                    <span>◆</span>
+
+                </div>
+
+
+                <!-- =================================
+                     COUNTDOWN
+                ================================== -->
+
+                <section class="welcome">
+
+                    <h1 class="nama-pengantin">
+                        Our Happy Day
+                    </h1>
+
+                    <div class="countdown">
+
+                        <div class="box">
+
+                            <span id="hari">
+                                00
+                            </span>
+
+                            <small>
+                                Hari
+                            </small>
+
+                        </div>
+
+
+                        <div class="box">
+
+                            <span id="jam">
+                                00
+                            </span>
+
+                            <small>
+                                Jam
+                            </small>
+
+                        </div>
+
+
+                        <div class="box">
+
+                            <span id="menit">
+                                00
+                            </span>
+
+                            <small>
+                                Menit
+                            </small>
+
+                        </div>
+
+
+                        <div class="box">
+
+                            <span id="detik">
+                                00
+                            </span>
+
+                            <small>
+                                Detik
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     AKAD NIKAH
+                ================================== -->
+
+                <div class="timeline">
+
+                    <h2>
+                        Akad Nikah
+                    </h2>
+
+                    <h3>
+                        13 September 2026
+                    </h3>
+
+                    <p>
+                        Pukul 07.00 WIB
+                    </p>
+
+                    <br>
+
+                    <h3>
+                        Kediaman Mempelai Wanita
+                    </h3>
+
+                    <p>
+                        Jalan Rahtawu Raya, Gang 21,
+                        Desa Gondosari RT 2 RW 7,
+                        Kecamatan Gebog, Kabupaten Kudus.
+                    </p>
+
+                    <a class="maps"
+                       href="https://www.google.com/maps?q=-6.728277,110.846766"
+                       target="_blank">
+
+                        📍 Buka Google Maps
+
+                    </a>
+
+                </div>
+
+
+                <!-- =================================
+                     RESEPSI
+                ================================== -->
+
+                <div class="timeline">
+
+                    <h2>
+                        Resepsi Pernikahan
+                    </h2>
+
+                    <h3>
+                        13 September 2026
+                    </h3>
+
+                    <p>
+                        Pukul 13.00 WIB - Selesai
+                    </p>
+
+                    <br>
+
+                    <h3>
+                        Kediaman Mempelai Wanita
+                    </h3>
+
+                    <p>
+                        Jalan Rahtawu Raya, Gang 21,
+                        Desa Gondosari RT 2 RW 7,
+                        Kecamatan Gebog, Kabupaten Kudus.
+                    </p>
+
+                    <a class="maps"
+                       href="https://www.google.com/maps?q=-6.728277,110.846766"
+                       target="_blank">
+
+                        📍 Buka Google Maps
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- =====================================
+             SELAMAT DATANG
+        ====================================== -->
+
+        <section class="welcome">
+
+            <h2>
+                Selamat Datang
+            </h2>
+
+            <p>
+                Terima kasih telah membuka undangan kami.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             KIRIM HADIAH
+        ====================================== -->
+
+        <section class="gift">
+
+            <h2>
+                🎁 Kirim Hadiah
+            </h2>
+
+            <p>
+                Doa restu Anda merupakan hadiah terindah bagi kami.
+                Namun apabila ingin memberikan tanda kasih,
+                dapat melalui:
+            </p>
+
+            <br>
+
+            <div class="gift-container">
+
+
+                <!-- BANK LASAN -->
+
+                <div class="gift-card">
+
+                    <img src="images/bca.png">
+
+                    <h3>
+                        Bank BCA
+                    </h3>
+
+                    <p class="rekening">
+                        0131794061
+                    </p>
+
+                    <p>
+                        a.n. Lasan Nabihi
+                    </p>
+
+                    <button onclick="copyRekening1()">
+                        📋 Salin Nomor Rekening
+                    </button>
+
+                </div>
+
+
+                <!-- BANK MAYA -->
+
+                <div class="gift-card">
+
+                    <img src="images/bca.png">
+
+                    <h3>
+                        Bank BCA
+                    </h3>
+
+                    <p class="rekening">
+                        0131794061
+                    </p>
+
+                    <p>
+                        a.n. Maya
+                    </p>
+
+                    <button onclick="copyRekening2()">
+                        📋 Salin Nomor Rekening
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             RSVP
+        ====================================== -->
+
+        <section class="rsvp" id="rsvp">
+
+            <h2>
+                Konfirmasi Kehadiran
+            </h2>
+
+            <p>
+                Mohon konfirmasi kehadiran Anda
+                pada acara pernikahan kami.
+            </p>
+
+
+            <form id="rsvpForm">
+
+
+                <!-- NAMA -->
+
+                <div class="input-group">
+
+                    <label>
+                        Nama
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        placeholder="Masukkan nama Anda"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- KEHADIRAN -->
+
+                <div class="input-group">
+
+                    <label>
+                        Kehadiran
+                    </label>
+
+                    <select id="status" required>
+
+                        <option value="">
+                            -- Pilih Kehadiran --
+                        </option>
+
+                        <option value="Hadir">
+                            ✅ Hadir
+                        </option>
+
+                        <option value="Tidak Hadir">
+                            ❌ Tidak Hadir
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- JUMLAH TAMU -->
+
+                <div class="input-group">
+
+                    <label>
+                        Jumlah Tamu
+                    </label>
+
+                    <input
+                        type="number"
+                        id="jumlah"
+                        min="1"
+                        max="10"
+                        value="1"
+                    >
+
+                </div>
+
+
+                <!-- UCAPAN -->
+
+                <div class="input-group">
+
+                    <label>
+                        Ucapan & Doa
+                    </label>
+
+                    <textarea
+                        id="ucapan"
+                        rows="5"
+                        placeholder="Tuliskan ucapan terbaik Anda..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- TOMBOL RSVP -->
+
+                <button
+                    type="submit"
+                    class="btn-rsvp"
+                >
+                    💌 Kirim RSVP
+                </button>
+
+
+                <!-- DAFTAR UCAPAN -->
+
+                <div id="listUcapan" class=""></div>
+
+            </form>
+
+        </section>
+
+
+        <!-- =====================================
+             PENUTUP
+        ====================================== -->
+
+        <section class="thanks">
+
+            <div class="thanks-card">
+
+                <div class="ornamen">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+
+                <h2>
+                    Terima Kasih
+                </h2>
+
+
+                <p class="thanks-text">
+
+                    Merupakan suatu kehormatan dan kebahagiaan
+                    bagi kami apabila Bapak/Ibu/Saudara/i berkenan
+                    hadir untuk memberikan doa restu.
+
+                </p>
+
+
+                <p class="closing">
+
+                    Wassalamu'alaikum
+                    <br>
+                    Warahmatullahi Wabarakatuh
+
+                </p>
+
+
+                <h3 class="couple-name">
+
+                    Lasan <span>&</span> Maya
+
+                </h3>
+
+
+                <p class="date">
+
+                    13 September 2026
+
+                </p>
+
+            </div>
+
+        </section>
+
 
     </div>
-
-</section>
-<!-- penutup baru -->
+    <!-- AKHIR #isi -->
 
 
-<!-- code lagu -->
-<audio id="musik" loop>
-    <source src="wedding.mp3" type="audio/mp3">
-</audio>
+    <!-- =========================================
+         AUDIO
+    ========================================== -->
 
-<script src="script.js"></script>
-<script type="module" src="js/firebase.js"></script>
-<script type="module" src="js/rsvp.js"></script>
+    <audio id="musik" loop>
 
+        <source
+            src="wedding.mp3"
+            type="audio/mp3">
+
+    </audio>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
+
+    <script
+        type="module"
+        src="js/firebase.js">
+    </script>
+
+    <script
+        type="module"
+        src="js/rsvp.js">
+    </script>
+
+
+</div>
+<!-- AKHIR .container -->
 
 </body>
+
 </html>
