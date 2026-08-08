@@ -388,20 +388,26 @@ p {
 }
 
 .kepada {
-    width: min(100%, 350px);
-
     margin: 25px auto;
+    width: min(100%, 620px);
+    padding: 18px;
 
-    padding: 15px;
+    border-radius: 22px;
 
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.22);
 
-    background:
-        rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
 
-    backdrop-filter: blur(5px);
+    font-size: 17px;
+}
 
-    -webkit-backdrop-filter: blur(5px);
+.kepada strong {
+    display: block;
+    margin-top: 5px;
+
+    font-size: 18px;
+    font-weight: bold;
 }
 
 
