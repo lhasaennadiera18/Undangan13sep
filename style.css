@@ -769,7 +769,7 @@ button:active {
 }
 
 .biodata-mempelai p {
-    font-size: 15px;
+    font-size: 32px;
 
     line-height: 1.6;
 
@@ -1629,17 +1629,17 @@ button:active {
     }
 
     .biodata-mempelai h2 {
-        font-size: 27px;
+        font-size: 32px;
 
         margin-bottom: 4px;
     }
 
     .biodata-mempelai h5 {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .biodata-mempelai p {
-        font-size: 12.5px;
+        font-size: 14px;
 
         line-height: 1.5;
     }
@@ -1653,7 +1653,7 @@ button:active {
 
     .ornamen-bunga-pria,
     .ornamen-bunga-wanita {
-        width: 210px !important;
+        width: 240px !important;
     }
 
     .ornamen-bunga-pria {
@@ -1837,11 +1837,11 @@ button:active {
     }
 
     .biodata-mempelai h2 {
-        font-size: 24px;
+        font-size: 32px;
     }
 
     .biodata-mempelai h5 {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .biodata-mempelai p {
