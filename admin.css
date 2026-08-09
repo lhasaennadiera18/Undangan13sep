@@ -1,0 +1,765 @@
+/* =========================================================
+   ADMIN RSVP — LASAN & MAYA
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Georgia, serif;
+    background: #f7f4ed;
+    color: #333;
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fffdf7,
+            #eee8da
+        );
+
+}
+
+
+.login-card {
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 40px 30px;
+
+    background: rgba(255,255,255,0.95);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.12);
+
+    text-align: center;
+
+}
+
+
+.login-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.login-card h1 {
+
+    color: #8a6a19;
+
+    font-size: 30px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.login-card > p {
+
+    color: #777;
+
+    margin-bottom: 30px;
+
+}
+
+
+.input-group {
+
+    text-align: left;
+
+    margin-bottom: 18px;
+
+}
+
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+}
+
+
+.input-group input:focus {
+
+    border-color: #b8860b;
+
+    box-shadow:
+        0 0 0 3px rgba(184,134,11,0.1);
+
+}
+
+
+.btn-login {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #b8860b;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-login:hover {
+
+    background: #8f6808;
+
+}
+
+
+.login-error {
+
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    color: #c0392b;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================================================
+   ADMIN PAGE
+========================================================= */
+
+.admin-page {
+
+    min-height: 100vh;
+
+}
+
+
+.admin-header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #29251c,
+            #514324
+        );
+
+    color: white;
+
+    padding: 30px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.admin-label {
+
+    color: #d4af37;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.admin-header h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    margin: 5px 0;
+
+}
+
+
+.admin-header h1 span {
+
+    color: #d4af37;
+
+}
+
+
+.admin-header p {
+
+    color: #ddd;
+
+    font-size: 14px;
+
+}
+
+
+.btn-logout {
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    background: transparent;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.btn-logout:hover {
+
+    background: rgba(255,255,255,0.1);
+
+}
+
+
+
+/* =========================================================
+   STATISTIK
+========================================================= */
+
+.statistik {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.stat-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
+
+}
+
+
+.stat-icon {
+
+    font-size: 30px;
+
+}
+
+
+.stat-card small {
+
+    display: block;
+
+    color: #777;
+
+    margin-bottom: 5px;
+
+}
+
+
+.stat-card strong {
+
+    font-size: 25px;
+
+    color: #8a6a19;
+
+}
+
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 40px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.06);
+
+}
+
+
+.content-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.content-header h2 {
+
+    color: #8a6a19;
+
+    margin-bottom: 5px;
+
+}
+
+
+.content-header p {
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+.btn-refresh {
+
+    border: none;
+
+    background: #8a6a19;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-box {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.search-box input,
+.search-box select {
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.search-box input {
+
+    flex: 1;
+
+}
+
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-container {
+
+    overflow-x: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 800px;
+
+}
+
+
+thead {
+
+    background: #f5f0e4;
+
+}
+
+
+th {
+
+    padding: 13px;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    color: #765b16;
+
+}
+
+
+td {
+
+    padding: 13px;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+
+    vertical-align: top;
+
+}
+
+
+tbody tr:hover {
+
+    background: #fcfaf5;
+
+}
+
+
+.status {
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.status-hadir {
+
+    background: #e4efe7;
+
+    color: #2f6b4f;
+
+}
+
+
+.status-tidak {
+
+    background: #f7e5e5;
+
+    color: #a33a3a;
+
+}
+
+
+.ucapan-cell {
+
+    max-width: 250px;
+
+    line-height: 1.5;
+
+}
+
+
+.btn-hapus {
+
+    border: none;
+
+    background: #c0392b;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+}
+
+
+.btn-hapus:hover {
+
+    background: #922b21;
+
+}
+
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #777;
+
+}
+
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty-data {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #777;
+
+}
+
+
+.empty-data div {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.empty-data h3 {
+
+    color: #8a6a19;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.admin-footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .statistik {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .admin-header {
+
+        padding: 25px 5%;
+
+    }
+
+
+    .admin-header h1 {
+
+        font-size: 25px;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .statistik {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .stat-card {
+
+        padding: 15px;
+
+    }
+
+
+    .stat-icon {
+
+        font-size: 24px;
+
+    }
+
+
+    .stat-card strong {
+
+        font-size: 21px;
+
+    }
+
+
+    .content {
+
+        width: 94%;
+
+        padding: 15px;
+
+    }
+
+
+    .content-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .search-box {
+
+        flex-direction: column;
+
+    }
+
+
+    .admin-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .btn-logout {
+
+        align-self: stretch;
+
+    }
+
+}

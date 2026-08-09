@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin RSVP | Lasan & Maya</title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     LOGIN ADMIN
+========================================= -->
+
+<div id="loginPage" class="login-page">
+
+    <div class="login-card">
+
+        <div class="login-icon">
+            💍
+        </div>
+
+        <h1>
+            Admin RSVP
+        </h1>
+
+        <p>
+            Lasan & Maya
+        </p>
+
+
+        <form id="loginForm">
+
+            <div class="input-group">
+
+                <label>
+                    Email Admin
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Masukkan email admin"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Masukkan password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn-login"
+            >
+                🔐 Login
+            </button>
+
+            <p
+                id="loginError"
+                class="login-error"
+            ></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     ADMIN PANEL
+========================================= -->
+
+<div
+    id="adminPage"
+    class="admin-page"
+    style="display:none;"
+>
+
+
+    <!-- HEADER -->
+
+    <header class="admin-header">
+
+        <div>
+
+            <span class="admin-label">
+                ADMIN PANEL
+            </span>
+
+            <h1>
+                Lasan <span>&</span> Maya
+            </h1>
+
+            <p>
+                Kelola konfirmasi kehadiran tamu
+            </p>
+
+        </div>
+
+
+        <button
+            id="logoutBtn"
+            class="btn-logout"
+        >
+            Keluar
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================
+         STATISTIK
+    ====================================== -->
+
+    <section class="statistik">
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                👥
+            </span>
+
+            <div>
+
+                <small>
+                    Total RSVP
+                </small>
+
+                <strong id="totalRSVP">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                ✅
+            </span>
+
+            <div>
+
+                <small>
+                    Hadir
+                </small>
+
+                <strong id="totalHadir">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                ❌
+            </span>
+
+            <div>
+
+                <small>
+                    Tidak Hadir
+                </small>
+
+                <strong id="totalTidakHadir">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                👨‍👩‍👧
+            </span>
+
+            <div>
+
+                <small>
+                    Total Tamu
+                </small>
+
+                <strong id="totalTamu">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         DAFTAR RSVP
+    ====================================== -->
+
+    <main class="content">
+
+
+        <div class="content-header">
+
+            <div>
+
+                <h2>
+                    Daftar RSVP
+                </h2>
+
+                <p id="jumlahData">
+                    Memuat data...
+                </p>
+
+            </div>
+
+
+            <button
+                id="refreshBtn"
+                class="btn-refresh"
+            >
+                🔄 Refresh
+            </button>
+
+        </div>
+
+
+
+        <!-- PENCARIAN -->
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="🔎 Cari nama tamu..."
+            >
+
+            <select id="filterStatus">
+
+                <option value="semua">
+                    Semua Status
+                </option>
+
+                <option value="Hadir">
+                    Hadir
+                </option>
+
+                <option value="Tidak Hadir">
+                    Tidak Hadir
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- LOADING -->
+
+        <div
+            id="loading"
+            class="loading"
+        >
+
+            Memuat data RSVP...
+
+        </div>
+
+
+
+        <!-- TABEL -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            No
+                        </th>
+
+                        <th>
+                            Nama
+                        </th>
+
+                        <th>
+                            Kehadiran
+                        </th>
+
+                        <th>
+                            Jumlah
+                        </th>
+
+                        <th>
+                            Ucapan
+                        </th>
+
+                        <th>
+                            Waktu
+                        </th>
+
+                        <th>
+                            Aksi
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="rsvpTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- DATA KOSONG -->
+
+        <div
+            id="emptyData"
+            class="empty-data"
+            style="display:none;"
+        >
+
+            <div>
+                📭
+            </div>
+
+            <h3>
+                Belum ada RSVP
+            </h3>
+
+            <p>
+                Data RSVP yang masuk akan muncul di sini.
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="admin-footer">
+
+        Lasan & Maya
+        •
+        Admin RSVP
+        •
+        13 September 2026
+
+    </footer>
+
+
+</div>
+
+
+
+<script
+    type="module"
+    src="admin.js"
+></script>
+
+
+</body>
+
+</html>
