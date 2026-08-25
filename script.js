@@ -378,3 +378,19 @@ function copyRekening2() {
         });
 
 }
+
+
+/* musik berhenti */
+document.addEventListener("visibilitychange", function () {
+    const musik = document.getElementById("musik");
+
+    if (!musik) return;
+
+    if (document.hidden) {
+        // Website masuk background
+        musik.pause();
+    } else {
+        // Website kembali dibuka
+        musik.play().catch(() => {});
+    }
+});
