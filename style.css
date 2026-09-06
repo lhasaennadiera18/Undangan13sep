@@ -1007,24 +1007,24 @@ button:active {
     color: #555;
 }
 
+
 /* =========================================================
-   22. GALERI — RAPI & PROPORSIONAL
+   22. GALERI
 ========================================================= */
 
 .galeri {
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
     gap: 12px;
 
     width: 100%;
 
-    max-width: 640px;
+    max-width: 600px;
 
-    margin: 10px auto 0;
-
-    padding: 0 5px;
+    margin: 0 auto;
 }
 
 .galeri img {
@@ -1032,33 +1032,25 @@ button:active {
 
     width: 100%;
 
-    aspect-ratio: 3 / 4;
+    aspect-ratio: auto;
 
     object-fit: cover;
 
-    object-position: center;
-
-    border-radius: 22px;
+    border-radius: 18px;
 
     cursor: pointer;
 
     box-shadow:
-        0 8px 20px
-        rgba(0, 0, 0, 0.12);
+        0 6px 15px
+        rgba(0, 0, 0, 0.10);
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        transform 0.3s ease;
 }
 
 .galeri img:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 12px 25px
-        rgba(0, 0, 0, 0.16);
+    transform: scale(1.04);
 }
-
 
 
 /* =========================================================
@@ -1713,31 +1705,15 @@ button:active {
     }
 
 
-    * GALERI HP */
+    /* GALERI */
 
-.galeri {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    .galeri {
+        gap: 8px;
+    }
 
-    gap: 9px;
-
-    width: 100%;
-
-    padding: 0 2px;
-
-    margin: 10px auto 0;
-}
-
-.galeri img {
-    aspect-ratio: 3 / 4;
-
-    width: 100%;
-
-    height: auto;
-
-    object-fit: cover;
-
-    border-radius: 16px;
-}
+    .galeri img {
+        border-radius: 14px;
+    }
 
 
     /* COUNTDOWN */
